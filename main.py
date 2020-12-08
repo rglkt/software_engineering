@@ -64,8 +64,8 @@ btn_xxtoexcel = Button(root, text="选择文件转为excel", command=xxtoexcel)
 btn_xxtoexcel.grid(row=4, column=1, sticky=E+W)
 
 #选择文件夹转为zip
-btn_xxtoexcel = Button(root, text="选择文件转为excel", command=xxtoexcel)
-btn_xxtoexcel.grid(row=5, column=1, sticky=E+W)
+btn_xxtozip = Button(root, text="选择文件转为zip", command=xxtozip)
+btn_xxtozip.grid(row=5, column=1, sticky=E+W)
 
 #选择文件夹将里面文件重命名
 l_rename = Label(root, text='文件主体名:')
