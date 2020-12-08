@@ -26,6 +26,12 @@ def xxtopdf():
         pdfConverter = PDFConverter(directory)
         pdfConverter.run_conver()
 
+def xxtoword():
+    if directory != "":
+        wordConverter = WORDConverter(directory)
+        wordConverter.run_conver()
+
+
 
 def rename_com():
     rename(directory, e_rename.get())
@@ -40,12 +46,16 @@ btn_choose_file.grid(row=1, column=1, sticky=E+W)
 btn_xxtopdf = Button(root, text="选择文件转为pdf", command=xxtopdf)
 btn_xxtopdf.grid(row=2, column=1, sticky=E+W)
 
+#选择文件夹转为word
+btn_xxtoword = Button(root, text="选择文件转为word", command=xxtoword)
+btn_xxtoword.grid(row=3, column=1, sticky=E+W)
+
 #选择文件夹将里面文件重命名
 l_rename = Label(root, text='文件主体名:')
-l_rename.grid(row=3, column=0, sticky=E+W)
+l_rename.grid(row=4, column=0, sticky=E+W)
 e_rename = Entry(root)
-e_rename.grid(row=3, column=1, sticky=E+W)
+e_rename.grid(row=4, column=1, sticky=E+W)
 btn_rename = Button(root, text="命名文件", command=rename_com)
-btn_rename.grid(row=4, column=1, sticky=E+W)
+btn_rename.grid(row=5, column=1, sticky=E+W)
 
 root.mainloop()
