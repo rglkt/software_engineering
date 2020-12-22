@@ -10,7 +10,6 @@ root.title('Speed')
 root.geometry('600x600')
 directory = os.path.abspath('.')
 
-
 def xz():
     # filename = tkinter.filedialog.askopenfilename()
     filename = tkinter.filedialog.askdirectory()
@@ -21,20 +20,16 @@ def xz():
     else:
         lb.config(text="You did not select any files")
 
-
 def xxtopdf():
     if directory != "":
         pdfConverter = PDFConverter(directory)
         pdfConverter.run_conver()
 
-
 def rename_com():
     rename(directory, e_rename.get())
 
-
 def mergeExcel_but():
     mergeExcel(path=directory)
-
 
 layout_row = 0
 # 选择文件
