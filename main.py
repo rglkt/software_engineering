@@ -1,10 +1,10 @@
 from tkinter import *
 import os
 import tkinter.filedialog
-import ppt2pdf
-from ppt2pdf import PDFConverter
-from rename import rename
-from mergeExcel import mergeExcel
+import fun.ppt2pdf
+from fun.ppt2pdf import PDFConverter
+from fun.rename import rename
+from fun.mergeExcel import mergeExcel
 root = Tk()
 root.title('Speed')
 root.geometry('600x600')

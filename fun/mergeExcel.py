@@ -1,6 +1,7 @@
+                        
 import openpyxl
 import os 
-from tool import _enumerate_filename
+from .mytool import _enumerate_filename
 def mergeExcel(path,row=2,col=1):
     file_list = _enumerate_filename(path)
     wb = openpyxl.load_workbook(file_list[0])
