@@ -4,7 +4,7 @@ sys.path.append(os.path.split(sys.path[0])[0])
 from fun.rename import rename
 if __name__ == '__main__':
     directory = "./TestData/Rename/"
-    directory_new = directory+"/new/"
+    directory_new = directory+"new/"
     new_name = "Rename"
     rename(directory, new_name)
     f1 = os.listdir(directory)
@@ -16,4 +16,5 @@ if __name__ == '__main__':
             print("The name is incorrect!")
             break
     for filename in f2:
-        os.remove(filename)
+        os.remove(os.path.join(directory_new,filename))
+    os.rmdir(directory_new)
